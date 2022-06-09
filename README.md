@@ -1,5 +1,5 @@
 # Alura
-## Documentação dos Cursos das Alura
+## Documentação dos Cursos da Alura
 
 
 
