@@ -1,0 +1,110 @@
+echo Oi Mundo
+
+
+C:\Users\FagnerB> dir
+C:\Users\FagnerB> cd Documents
+C:\Users\FagnerB\Documents> dir
+C:\Users\FagnerB\Documcdents> cd ..
+C:\Users\FagnerB> dir
+C:\Users\FagnerB> mkdir codigo
+C:\Users\FagnerB> dir
+C:\Users\FagnerB> cd codigo
+C:\Users\FagnerB\codigo>
+C:\Users\FagnerB\codigo> dir .
+. - diretório corrente
+.. diretório um nível acima
+
+
+C:\Users\FagnerB\codigo> mkdir codigo_java
+C:\Users\FagnerB\codigo> rmdir codigo_java 
+C:\Users\FagnerB\codigo> mkdir java
+C:\Users\FagnerB\codigo> cls
+
+C:\Users\FagnerB\codigo> echo Oi Mundo > saida.txt 
+C:\Users\FagnerB\codigo> dir
+C:\Users\FagnerB\codigo> type saida.txt 
+C:\Users\FagnerB\codigo> del saida.txt
+C:\Users\FagnerB\codigo> echo Bem-vindo a Alura > saida.txt
+C:\Users\FagnerB\codigo> type saida.txt 
+C:\Users\FagnerB\codigo> copy saida.txt saida2.txt
+C:\Users\FagnerB\codigo> type saida2.txt
+C:\Users\FagnerB\codigo> rename saida2.txt mensagem.txt
+C:\Users\FagnerB\codigo> move mensagem.txt ..
+C:\Users\FagnerB\codigo> echo Ola mundo > arquivo.txt
+C:\Users\FagnerB\codigo> echo Novos dados! >> arquivo.txt
+C:\Users\FagnerB\codigo> type arquivo.txt
+
+C:\Users\FagnerB\codigo> cd ..
+C:\Users\FagnerB> tree
+
+C:\Users\FagnerB> cd codigo
+C:\Users\FagnerB\codigo> more arquivo.txt
+
+http://cmder.net/
+
+
+C:\Users\FagnerB\codigo> echo %date%
+C:\Users\FagnerB\codigo> echo %time%
+
+
+C:\Users\FagnerB\codigo> echo %PATH% > backupPATH.txt
+
+C:\Users\FagnerB\codigo> echo PATH
+C:\Users\FagnerB\codigo> echo %PATH%
+
+C:\Users\FagnerB\codigo> cd ..
+C:\Users\FagnerB> mkdir bin
+C:\Users\FagnerB> move C:\Users\FagnerB\codigo\script.bat bin
+
+C:\Users\FagnerB> set PATH=%PATH%;C:\Users\FagnerB\bin
+C:\Users\FagnerB> echo %PATH%
+C:\Users\FagnerB> script.bat
+C:\Users\FagnerB> set
+C:\Users\FagnerB> set PASTA_CODIGO=C:\Users\FagnerB\codigo
+C:\Users\FagnerB> set
+C:\Users\FagnerB> echo %PASTA_CODIGO%
+C:\Users\FagnerB> setx PATH "%PATH%;C:\Users\FagnerB\bin" /M
+C:\Users\FagnerB> echo %PROCESSOR_ARCHITECTURE%
+C:\Users\FagnerB> java -version
+C:\Users\FagnerB> javac -version
+C:\Users\FagnerB> setx PATH "%PATH%;C:\Program Files\Java\jdk-18.0.1.1\bin" /M
+C:\Users\FagnerB> javac -version
+C:\Users\FagnerB> setx JAVA_HOME "C:\Program Files\Java\jdk-18.0.1.1" /M
+C:\Users\FagnerB> echo %JAVA_HOME%
+
+
+C:\Users\FagnerB> wmic OS get OSArchitecture
+
+http://www.rapidee.com/en/download
+
+
+https://chocolatey.org/
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+choco install <nome-do-pacote>
+choco uninstall <nome_do_pacote>
+choco list -l
+
+choco install cmder -y
+
+dir = ls
+copy = cp
+mkdir = mkdir
+move = mv
+del = rm
+rmdir = rmdir
+type = cat
+
+ls -la | grep Doc
+find . | grep Java
+
+
+
+
+
+
+
+
+
+
