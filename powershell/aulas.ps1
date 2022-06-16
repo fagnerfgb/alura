@@ -93,3 +93,74 @@ dir -Recurse -File | Where-Object Name -like "*_migrando_*" | Select-Object name
 dir -Recurse -File | Where-Object Name -like "*_migrando_*" | Select-Object name, Length /1KB
 get-help Select-Object
 dir -Recurse -File | Where-Object Name -like "*_migrando_*" | Select-Object name, { "{0:N2}KB" -f ($_.length / 1KB)}
+dir -Recurse -File | ? Name -like "*_migrando_*" | select name, { "{0:N2}KB" -f ($_.length / 1KB)}
+
+dir -Recurse -File `
+| ? Name -like "*_migrando_*" `
+| select `
+    name, `
+    { "{0:N2}KB" -f ($_.length / 1KB)}
+
+dir -Recurse -File |
+? Name -like "*_migrando_*" |
+select `
+    name, `
+    { "{0:N2}KB" -f ($_.length / 1KB)}
+
+
+$nameExpr = "Name"
+$lengthExpr =  { "{0:N2}KB" -f ($_.length / 1KB)}
+dir -Recurse -File |
+? Name -like "*_migrando_*" |
+select `
+    $nameExpr, $lengthExpr
+
+(1,2,3).GetType().Name  
+(,1).GetType().Name 
+@().GetType().Name 
+@(1).GetType().Name 
+
+
+$nameExpr = "Name"
+$lengthExpr =  { "{0:N2}KB" -f ($_.length / 1KB)}
+$params = @( $nameExpr, $lengthExpr)
+dir -Recurse -File |
+? Name -like "*_migrando_*" |
+select `
+    $params
+
+
+$nameExpr = @{} 
+$nameExpr.Add("Label", "Nome")
+$nameExpr.Add("Expression", { $_.Name })
+$lengthExpr = @{}
+$lengthExpr.Add("Label", "Tamanho")
+$lengthExpr.Add("Expression",{ "{0:N2}KB" -f ($_.length / 1KB) } )
+$params = @( $nameExpr, $lengthExpr)
+dir -Recurse -File |
+? Name -like "*_migrando_*" |
+select `
+    $params
+
+
+@{}.GetType().name
+
+$nameExpr = @{
+    Label="Nome";
+    Expression={ $_.Name}
+} 
+$lengthExpr = @{
+    Label="Tamanho";
+    Expression={ "{0:N2}KB" -f ($_.length / 1KB) }
+} 
+$params = @( $nameExpr, $lengthExpr)
+dir -Recurse -File |
+? Name -like "*_migrando_*" |
+select `
+    $params
+
+    gci -recurse -file |
+        ? Name -like "*.exe" |
+        select `
+            Name, `
+            { "{0:N2}MB" -f ($_.Length / 1MB) }

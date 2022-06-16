@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+var anoDescobrimento = 1500;
+var anoAtual = 2022;
+var diferencaAnos = anoAtual - anoDescobrimento;
+var idadeMediaFilhos = 28
+var geracoes = Math.round(diferencaAnos / idadeMediaFilhos);
+mostra("Se passaram " + geracoes + " gerações");
+</script>
