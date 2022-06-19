@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+	var tabuada = parseInt(prompt("Qual a tabuada você deseja saber ?"));
+	for (var multiplicador=1; multiplicador <= 10; multiplicador++){
+		var resultado = tabuada * multiplicador;
+		mostra(tabuada + " * " + multiplicador + " = " + resultado);
+	}
+	mostra("FIM");
+</script>
+
+var contador = 1;
+while(contador <= 10) {
+    alert("Contador atual: " + contador);
+    contador = contador + 1;
+}
+
+for (var contador = 1; contador <= 10; contador++){
+	alert("Contador atual: " + contador);	
+}
+
+for( var i = 0; i < 10; i++ ) {
+    alert( "O resultado é " + (2 * i) );
+}
+
+var i = 0;
+while (i<10){
+	alert( "O resultado é " + (2 * i) );
+	i++;
+}
